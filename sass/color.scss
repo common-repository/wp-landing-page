@@ -1,0 +1,83 @@
+// Customisable colors
+$topline: unquote("%%topline%%");
+$toplinetxt: unquote("%%toplinetxt%%");
+
+$header: unquote("%%header%%");
+$headertxt: unquote("%%headertxt%%");
+
+$benefits: unquote("%%benefits%%");
+$benefitstxt: unquote("%%benefitstxt%%");
+
+$cta: unquote("%%cta%%");
+$ctatxt: unquote("%%ctatxt%%");
+
+
+body {
+	//background: #{$topline} !important;
+	&:before {
+		display: none !important;
+	}
+}
+
+// Header
+.top-line-bg{
+	background: #{$topline};
+}
+
+.top-line-text{
+	* {
+		color: #{$toplinetxt};
+	}
+}
+
+.header-content-btn-cta1 {
+	.btn-cta, input[type=submit], button[type=submit] {
+		background: #{$cta};
+		color: #{$ctatxt};
+		&:hover {
+			background: #{$cta};
+			color: #{$ctatxt};
+		}
+	}
+}
+
+.header-content-btn-cta2 {
+	.btn-cta, input[type=submit], button[type=submit] {
+		border-color: #{$ctatxt};
+		color: #{$ctatxt};
+		&:hover {
+			border-color: #{$cta};
+			color: #{$cta};
+		}
+	}
+}
+
+.header-content-bg {
+	background: #{$header};
+}
+
+.header-content-text {
+	color: #{$headertxt};
+}
+
+.benefits-bg {
+	background: #{$benefits};
+}
+
+.benefits-text {
+	color: #{$benefitstxt};
+}
+
+.footer-bg {
+	background: #{$topline} !important;
+}
+
+.footer-text {
+	* {
+		color: #{$toplinetxt};
+	}
+}
+
+.gradient-top-color {
+	background: linear-gradient(top, #{$topline}, #{$header});
+}
